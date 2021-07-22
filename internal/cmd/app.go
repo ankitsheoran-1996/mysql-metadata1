@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"google.golang.org/protobuf/proto"
 	"log"
 	"mysql-metadata/internal/repositories"
@@ -26,6 +27,7 @@ func StartApplication() {
 	bannerIdByte, err := proto.Marshal(&bannerIds)
 	storage.Upload("active-cacher-bkt", "BannersByCampaignIds", string(getDataType(
 		"BannersByCampaignIds")), bannerIdByte)
+	fmt.Println(bannerIds)
 	//events.PushMsgToTopic("OBJECT_FINALIZE", "active-cacher-bkt", "BannersByCampaignIds",
 	//	string(getDataType("BannersByCampaignIds")))
 	//
