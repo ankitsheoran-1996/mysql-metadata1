@@ -2,7 +2,7 @@ package repositories
 
 import (
 	"database/sql"
-	"log"
+	"fmt"
 	config "mysql-metadata/configuration"
 )
 
@@ -16,7 +16,7 @@ func InitDbConnection() {
 	var err error
 	DbConn.SqlDb, err = ConnectDB()
 	if err != nil {
-		log.Println("Db connection failed ", err.Error())
+		fmt.Println("Db connection failed ", err.Error())
 	}
 }
 
