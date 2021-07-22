@@ -1,0 +1,5 @@
+{
+  "DriverName": "mysql",
+  "DataSourceName": "root:Etern0@!23@tcp(10.52.136.21:3306)/daedalus",
+  "BucketName": "active-cacher-bkt"
+}

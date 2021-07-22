@@ -1,0 +1,151 @@
+syntax="proto3";
+
+option go_package="/proto_models";
+
+
+package main;
+
+message Campaign {
+  int32 id = 1;
+  string name = 2;
+  int32 order_id = 3;
+  int64 group_id = 4;
+  int32 report_group_id = 5;
+  int32 status_id = 6;
+  int32 has_rep = 7;
+  int32 bill_on = 8;
+  int32 billing_type_id = 9;
+  float billing_amount = 10;
+  int32 booked_inventory = 11;
+  int32 add_on_percentage = 12;
+  string add_on_reason = 13;
+  string rejection_reason = 14;
+  int32 inventory_to_deliver = 15;
+  double billing_rate = 16;
+  int32 budget_type = 17;
+  double budget_value = 18;
+  int32 daily_cap = 19;
+  int32 daily_impression_cap = 20;
+  int32 daily_click_cap = 21;
+  int32 daily_install_cap = 22;
+  int32 frequency_cap = 23;
+  int64 reset_timer_seconds = 24;
+  int32 frequency_cap_auto = 25;
+  int64 reset_timer_seconds_auto = 26;
+  string release_date = 27;
+  string end_date = 28;
+  double ecpm = 29;
+  double v_ecpm = 30;
+  double v_cpi = 31;
+  string iep = 32;
+  string cep = 33;
+  string cep_metadata = 34;
+  int32 has_cep = 35;
+  int32 is_value_add = 36;
+  string notes = 37;
+  int32 subtype_id = 38;
+  int32 is_booked = 39;
+  string targeting_parameters = 40;
+  string subtargeting_parameters = 41;
+  string system_targeting_parameters = 42;
+  string campaign_properties = 43;
+  int32 version_cap_enabled = 44;
+  string sub_slots = 45;
+  int32 is_selfserve = 46;
+  int32 is_payment_settled = 47;
+  double payment_amount = 48;
+  double credit_amount = 49;
+  double coupon_amount = 50;
+  double used_payment_amount = 51;
+  double used_credit_amount = 52;
+  double used_coupon_amount = 53;
+  int32 billed_inventory = 54;
+  double billed_payment = 55;
+  int32 requires_approval = 56;
+  int32 is_red_flagged = 57;
+  int32 delivery_type = 58;
+  int32 delivery_priority = 59;
+  int32 version = 60;
+  int32 cr_id = 61;
+  string data = 62;
+  string nth_imp = 63;
+  double variance = 64;
+  double mean = 65;
+  string delivery_slab_ctr = 66;
+  string created_at = 67;
+  string updated_at = 68;
+  string deleted_at = 69;
+  string onboarded_at = 70;
+  int32 created_by = 71;
+  double current_ctr = 72;
+  string zone_ctr = 73;
+  int32 optimization_type_id = 74;
+  int32 deliver_from = 75;
+  string ro_date = 76;
+  string creatives_type = 77;
+  int32 perf_bidding_rate = 78;
+  double v_billing_rate = 79;
+  int32 lead_id = 80;
+  int32 optimization_entity_id = 81;
+  string context_targeting_parameters = 82;
+  int32 third_party_source = 83;
+  double tqi = 84;
+  double intraday_osi= 85;
+  int32 has_keyword_targeting = 86;
+  int32 clicks_to_deliver = 87;
+  int32 is_content_campaign = 88;
+  int32 campaign_classification_id = 89;
+  int32 cx_inventory_honoured = 90;
+  string dan_targeting_parameters = 91;
+  string perf_slider_value = 92;
+  int32 delivery_mode_id = 93;
+  int32 cx_paced_reach_maximised = 94;
+  double secondary_goal_billing_rate = 95;
+  string host_app_id = 96;
+  string optimization_group_id = 97;
+}
+
+message CarouselBanner {
+  int32 id = 1;
+  int32 banner_id = 2;
+  string name = 3;
+  string data = 4;
+  int64 status_id = 5;
+  string created_at = 6;
+  string updated_at = 7;
+}
+
+message Banner {
+  int64 id = 1;
+  int32 campaign_id = 2;
+  int32 type_id = 3;
+  int32 subtype_id = 4;
+  string name = 5;
+  string data = 6;
+  double ecpm = 7;
+  int32 weightage = 8;
+}
+
+message Affiliate {
+  int64 id = 1;
+  int64 requirement_id = 2;
+  int64 user_id = 3;
+  float payout = 4;
+  int64 inventory = 5;
+  string event_info = 6;
+  string created_at = 7;
+  string updated_at = 8;
+}
+
+message IdList {
+  repeated int64 id = 1;
+}
+
+message StringList {
+  repeated string str = 1;
+}
+
+message EntityInfo {
+  repeated int64 id = 1;
+  repeated string primary_event_name = 2;
+}
