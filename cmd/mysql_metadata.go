@@ -5,6 +5,7 @@ import (
 	config "mysql-metadata/configuration"
 	"mysql-metadata/internal/cmd"
 	"mysql-metadata/internal/repositories"
+	"mysql-metadata/internal/storage"
 	"os"
 )
 
@@ -17,5 +18,6 @@ func MysqlMetaData() {
 	}
 
 	repositories.InitDbConnection()
+	storage.InitStorage()
 	cmd.StartApplication()
 }

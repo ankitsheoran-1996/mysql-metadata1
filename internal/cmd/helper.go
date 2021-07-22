@@ -10,13 +10,13 @@ import (
 type ProtoType string
 
 const (
-	Banner         ProtoType = "Banner"
-	Campaign                 = "Campaign"
-	CarouselBanner           = "CarouselBanner"
-	Affiliate                = "Affiliate"
-	StringList               = "StringList"
-	IdList                   = "IdList"
-	EntityInfo               = "EntityInfo"
+	Banner         = "Banner"
+	Campaign       = "Campaign"
+	CarouselBanner = "CarouselBanner"
+	Affiliate      = "Affiliate"
+	StringList     = "StringList"
+	IdList         = "IdList"
+	EntityInfo     = "EntityInfo"
 )
 
 func getDataType(key string) ProtoType {

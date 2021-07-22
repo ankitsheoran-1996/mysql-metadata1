@@ -10,7 +10,7 @@ import (
 
 var storageClient *storage.Client
 
-func init() {
+func InitStorage() {
 	var err error
 	ctx := context.Background()
 	if storageClient, err = storage.NewClient(ctx); err != nil {
